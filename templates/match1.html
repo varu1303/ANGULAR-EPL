@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <p class="col-xs-12 na" ng-show="stat1.match.score1 == null">{{stat1.match.team1.name | uppercase }} vs {{stat1.match.team2.name | uppercase }} scheduled</p>
+        <p class="col-xs-12 draw" ng-show="stat1.match.score1 == stat1.match.score2 && stat1.match.score1 != null">{{stat1.match.team1.name | uppercase }} drew with {{stat1.match.team2.name | uppercase }} </p>
+        <p class="col-xs-12 win" ng-show="stat1.match.score1 > stat1.match.score2 && stat1.match.score1 != null">{{stat1.match.team1.name | uppercase }} won against {{stat1.match.team2.name | uppercase }} </p>
+        <p class="col-xs-12 loss" ng-show="stat1.match.score1 < stat1.match.score2 && stat1.match.score1 != null">{{stat1.match.team1.name | uppercase }} lost to {{stat1.match.team2.name | uppercase }} </p>
+        <p class="col-xs-12 date"><u>on {{stat1.match.date  | date : 'MMM dd yyyy'}}</u></p>
+    </div>
+    <blockquote class="blockquote">
+        <p class="mb-0">{{stat1.match.team1.code}} : {{stat1.match.score1}}</p>
+    </blockquote>
+    <blockquote class="blockquote blockquote-reverse">
+        <p class="mb-0"> {{stat1.match.score2}} : {{stat1.match.team2.code}} </p>
+    </blockquote>
+</div>

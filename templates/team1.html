@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <h1 id="teamhead" class="col-xs-12"> {{teamstat1.team.name}}</h1>
+    </div>
+
+    <div class="tab" style="margin-bottom: 13%;">
+        <div class="row">
+            <h1 class="col-xs-12">STATS</h1>
+
+            <table class="table table-hover">
+                <tr style=" background-color: rgb(36,0,60);">
+                    <th>TEAM</th>
+                    <th>PLAYED</th>
+                    <th>WON</th>
+                    <th>LOST</th> 
+                    <th class="hidden-xs">DRAW</th>
+                    <th class="hidden-xs">GF</th>
+                    <th class="hidden-xs">GA</th>
+                    <th class="hidden-xs">GD</th>
+                    <th>POINTS</th>
+                </tr>
+                <tr>
+                    <td>{{teamstat1.teamStat.code}}</td>
+                    <td>{{teamstat1.teamStat.win + teamstat1.teamStat.draw + teamstat1.teamStat.loss}}</td>
+                    <td>{{teamstat1.teamStat.win}}</td>
+                    <td>{{teamstat1.teamStat.loss}}</td>   
+                    <td class="hidden-xs">{{teamstat1.teamStat.draw}}</td>
+                    <td class="hidden-xs">{{teamstat1.teamStat.gfo}}</td>
+                    <td class="hidden-xs">{{teamstat1.teamStat.gao}}</td>
+                    <td class="hidden-xs">{{teamstat1.teamStat.gdo}}</td>
+                    <td>{{teamstat1.teamStat.point}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

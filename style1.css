@@ -1,0 +1,358 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+}
+
+
+.header{
+    width: 100%;
+    background-color: rgb(36,0,60);
+    border: 1px solid rgb(36,0,60);
+}
+
+
+.inner-header h1, .inner-header h4{
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding: 7px;
+}
+
+
+.banner1{
+    width: 100%;
+    background: url(images/Untitled.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+}
+
+.inner-ban{
+    width:90%;
+    margin: 0 auto;
+}
+img{
+    width:100%;
+}
+
+
+
+.content{
+    width: 100%;
+}
+
+
+
+.content h1, .content h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: rgb(36,0,60);
+    text-align: center; 
+    font-size: 2em;
+}
+
+.footer{
+    background-color: rgb(36,0,60);
+}
+
+.text h3, .text p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    height: auto;
+    padding: 5px;
+}
+
+
+
+.social h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+    text-align: center;   
+}
+
+.social i{
+    text-align: center;
+    padding: 8px;
+}
+
+.social a{
+    text-decoration: none;
+    color: white; 
+}
+
+.social a:hover{
+    color: aqua;
+}
+
+#line{
+    display: none;
+}
+
+.blockquote{
+    border-left-color: rgb(36,0,60);
+}
+
+.blockquote p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: rgb(36,0,60);
+}
+/*style for view1*/
+
+.aRound{
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(36,0,60);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.team{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;  
+    font-size: 1.7em;
+}
+
+.score{
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(36,0,60);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    font-size: 1.5em;
+}
+
+#vhead{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+}
+
+#vcount{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;    
+}
+
+.nav{
+    margin:8px;
+}
+
+.nav button{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border-color: rgb(36,0,60);
+}
+
+hr{
+    border-color: rgb(36,0,60);
+}
+.mdshow {
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    
+}
+
+.mdshow button {
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    border-color: rgb(36,0,60);
+}
+
+.mdshow span{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+
+
+/*style for table view */
+
+.tab h1{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border-color: rgb(36,0,60);
+}
+
+.tab table th{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.tab table td{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.tab i{
+    color: rgb(36,0,60);
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+
+#tomatch{
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+}
+
+#tabtohome{
+    position: fixed;
+    bottom: 130px;
+    right: 30px;
+}
+
+#totab , #tohome {
+    text-decoration: none;
+}
+
+#totab {
+   position: fixed;
+    top: 150px;
+    right: 30px; 
+}
+
+#tohome {
+   position: fixed;
+    top: 150px;
+    left: 30px; 
+}
+
+/*for active links*/
+
+.linkactive{
+    color:white;
+    background-color: rgb(36,0,60);
+}
+
+.scoreactive{
+    color:rgb(36,0,60);
+    background-color: white;
+}
+
+/*Style for a single match view */
+
+.win, .draw, .loss, .na {
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    font-size: 2em;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.na{
+   background-color: fuchsia; 
+}
+
+.win{
+    background-color: darkolivegreen;
+}
+
+.loss{
+    background-color: coral;
+}
+
+.draw{
+    background-color: aqua;
+}
+
+.date{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    font-size: 1.2em;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.blockquote{
+      color: rgb(36,0,60); 
+      font-size: 2em;
+      padding-top:20px;
+}
+
+.blockquote-reverse{
+    border-color: rgb(36,0,60);
+    padding-bottom:20px;
+}
+
+/*team view */
+
+#teamhead{
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    font-size: 4em;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: cadetblue;
+}
+
+@media only screen and (max-width: 850px){
+    .banner1{
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #line{
+        display: block;
+        color: white;
+    }
+    .banner1{
+    width: 100%;
+    height: 450px;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+    .blockquote-reverse{
+    margin-bottom:75px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    img{
+        margin-top: 30%;
+        width:100%;
+    }
+}
+
+
+
+

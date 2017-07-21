@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="bplapp">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="League">
+    <meta name="author" content="Varun">
+
+    <title>EPL STATS</title>
+
+    <!---Importing Font ---->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- Bootstrap minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style1.css">
+
+  </head>
+  <body ng-controller="MainCtrl as main" ng-cloak>
+<!-- header starts -->
+    <div class="header">
+        <div class="inner-header">
+            <h1>EPL STATS</h1>
+            <h4>2012/13 to 2016/17</h4>
+        </div>
+    </div>
+<!--- Inserting templates here between header and footer for different pages of site -->
+    <ng-view></ng-view>
+<!-- footer starts -->
+    <div class="footer">
+        <div class="row">
+            <div class="text col-sm-6 col-xs-12">
+                <h3>ABOUT</h3>
+                <p>We bring you the complete stats of 2012 to 2016 BPL seasons</p>
+            </div>
+            <hr id="line" class="col-xs-12">
+            <div class="social col-sm-6 col-xs-12">
+                <h3>SOCIAL</h3>
+                
+                <div class="row">
+                    <a href="https://www.facebook.com/premierleague" target="_blank"><i class="fa fa-facebook fa-2x col-sm-4 col-xs-12" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/premierleague" target="_blank"><i class="fa fa-twitter fa-2x col-sm-4 col-xs-12" aria-hidden="true"></i></a>
+                    <a href="https://www.premierleague.com/" target="_blank"><i class="fa fa-paw fa-2x  col-sm-4 col-xs-12" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---Importing Icons ---->
+    <script src="https://use.fontawesome.com/7d3906fbc4.js"></script>
+    <!-- jQuery library reuired for bootstraps JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript of bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!---Custom jquery JS file ---->
+    <script src="js/hover.js"></script>
+    <!-- Angular CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <!-- Angular route CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <!---Custom ang JS file ---->
+    <script src="js/homeang.js"></script>
+    <!---Custom routing ang JS file ---->
+    <script src="js/route.js"></script>
+    <!---Custom service ang JS file ---->
+    <script src="services/getSer.js"></script>
+    <!---Custom service ang JS file ---->
+    <script src="services/setyea.js"></script>
+    <!---Custom service ang JS file ---->
+    <script src="services/matchservice.js"></script>
+    <!---Custom service ang JS file ---->
+    <script src="services/teamservice.js"></script>
+    <!---Custom tab view related controller JS file ---->
+    <script src="js/tab.js"></script>
+  </body>
+</html>

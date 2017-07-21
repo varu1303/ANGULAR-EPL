@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <h1 id="vhead" class="col-xs-12">{{v15.title}}</h1>
+        <h4 id="vcount" class="col-xs-12">Number of MatchDays : {{v15.count}}</h4>
+        <br>
+        
+        <p class="col-sm-6 col-xs-12 mdshow"> <u> SEE SPECIFIC TEAM'S MATCHES </u></p>
+        <div class="input-group col-sm-6 col-xs-12 ">
+            <input type="text" class="form-control" placeholder="Enter Team's Name" aria-describedby="basic-addon2" ng-model="v15.teamfind">
+        </div>
+       
+        
+        <div style="margin:8px">
+            <p class="col-sm-6 col-xs-12 mdshow"> <u>SEE MATCHES WITH SAME OR MORE GD</u></p>
+            <div class="input-group col-sm-6 col-xs-12 ">
+                <input type="text" class="form-control" placeholder="Enter GD" aria-describedby="basic-addon2" ng-model="v15.gd">
+            </div>
+        </div>
+        <hr>
+         
+        <p class="col-xs-12 mdshow" style="margin:10px"><u> HEAD ON CLASH </u> </p>
+            <div class="input-group  col-xs-12 ">
+                <input type="text" class="form-control" placeholder="Enter Team1" aria-describedby="basic-addon2" ng-model="v15.teamfind">
+            </div>
+        <p class="col-xs-12 mdshow" style="margin:10px">VS </p>
+            <div class="input-group  col-xs-12 " style="margin-top:8px">
+                <input type="text" class="form-control" placeholder="Enter Team2" aria-describedby="basic-addon2" ng-model="v15.vs">
+            </div>
+        <hr>
+        <div class="mdshow col-xs-12" class="row" style="text-align: center; margin:10px;">
+           <button class="btn btn-default" ng-click="v15.oneact()"  ng-hide="v15.filtering">{{v15.buttext}}</button>
+        </div>
+        
+        <p class="col-xs-12 mdshow" style="padding:20px;" ng-show="v15.navbut">
+        <i class="fa fa-arrow-circle-left fa-2x col-xs-4" aria-hidden="true" style="text-align: center;" ng-click="v15.decr()"></i>
+        <span class="col-xs-4" style="text-align: center;"> NAVIGATE </span> 
+        <i class="fa fa-arrow-circle-right fa-2x col-xs-4" aria-hidden="true" style="text-align: center;" ng-click="v15.incr()"></i>
+        </p>
+
+        
+        <div id="matchdetails" ng-repeat="round in v15.rounds | limitTo:v15.manyday:v15.fromday">
+            <p class="aRound col-xs-12" ng-hide="v15.filtering">{{round.name}} - {{round.matches[0].date | date : 'MMM dd yyyy'}}</p>
+            <p class="row" style="padding: 5px;" ng-repeat="match in round.matches | filter: v15.filterbyName">
+                <a href="#!team1Stat" ng-click="v15.shareTeam(match.team1)">
+                    <span id="teamlink" class="team col-xs-5">{{match.team1.code}}</span>
+                </a>
+                <a id="matchlink" href="#!match1Stat" ng-click="v15.shareData(match)">
+                    <span class="score col-xs-1" ng-hide="match.score1 == null">{{match.score1}}</span>
+                    <span class="score col-xs-1" ng-hide="match.score1 == null">{{match.score2}}</span>
+                    <span class="score col-xs-1" ng-show="match.score1 == null">-</span>
+                    <span class="score col-xs-1" ng-show="match.score1 == null">-</span>
+                </a>
+                <a href="#!team1Stat" ng-click="v15.shareTeam(match.team2)">
+                    <span id="teamlink" class="team col-xs-5">{{match.team2.code}}</span>
+                </a>
+            </p>
+        </div>
+    </div>
+     <a  id="totab" href="#!table2015">
+         <i id="totab" class="fa fa-table fa-2x" title="POINTS TABLE" aria-hidden="true"></i>
+    </a>
+    <a id="tohome" href="#!">
+        <i class="fa fa-home fa-2x" title="HOME" aria-hidden="true"></i>
+    </a>
+</div>
