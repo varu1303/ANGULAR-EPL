@@ -241,13 +241,13 @@ hr{
 #totab {
    position: fixed;
     bottom: 100px;
-    right: 30px; 
+    right: 25px; 
 }
 
 #tohome {
    position: fixed;
     bottom: 150px;
-    right: 30px; 
+    right: 25px; 
 }
 
 /*for active links*/

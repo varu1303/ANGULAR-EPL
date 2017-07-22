@@ -42,7 +42,7 @@
             <p class="aRound col-xs-12" ng-hide="v15.filtering">{{round.name}} - {{round.matches[0].date | date : 'MMM dd yyyy'}}</p>
             <p class="col-xs-12" style="padding: 5px;" ng-repeat="match in round.matches | filter: v15.filterbyName">
                 <a href="#!team1Stat" ng-click="v15.shareTeam(match.team1)">
-                    <span id="teamlink" class=" col-sm-5 team col-xs-4">{{match.team1.code}}</span>
+                    <span id="teamlink" class=" col-xs-5 team">{{match.team1.code}}</span>
                 </a>
                 <a id="matchlink" href="#!match1Stat" ng-click="v15.shareData(match)">
                     <span class="score col-xs-1" ng-hide="match.score1 == null">{{match.score1}}</span>
