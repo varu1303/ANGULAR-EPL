@@ -310,7 +310,20 @@ hr{
     border-color: rgb(36,0,60);
     padding-bottom:20px;
 }
+/* game view */
 
+.gamelist {
+    color: rgb(36,0,60);
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    font-size: 1.6em;
+    padding: 10px; 
+}
+
+#team{
+    background-color: aquamarine;
+}
 /*team view */
 
 #teamhead{

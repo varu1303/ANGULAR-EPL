@@ -1,5 +1,5 @@
 angular
-        .module('bplapp', ['routemod','getinfo','tabinfo','matchData','teamData','setyear'])
+        .module('bplapp', ['routemod','getinfo','tabinfo','matchData','teamData','setyear','tabtoteam'])
         .controller('MainCtrl',MainCtrl)
         .controller('v15Ctrl',v15Ctrl)
         .controller('stat1Ctrl',stat1Ctrl)

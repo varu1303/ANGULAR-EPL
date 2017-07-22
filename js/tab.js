@@ -5,28 +5,39 @@ angular
 
 
 
-function t15Ctrl(setYear,getData){
+function t15Ctrl(teamService,setYear,getData){
     var vm= this;
+    
+    
+    vm.setTeam = function (code,year) {
+        console.log('sending teams code ' + code);
+        console.log('sending teams year ' + year);
+        var team = {};
+        team.code = code;
+        team.year = year;
+        teamService.set(team);
+        
+    };
+    
+    
+    
+    
     vm.year = setYear.get();
     vm.pyear = vm.year.selected[0]+vm.year.selected[1]+vm.year.selected[2]+(vm.year.selected[3]-1)+
                    vm.year.selected[4]+vm.year.selected[5]+(vm.year.selected[6]-1);
     vm.nyear = vm.year.selected[0]+vm.year.selected[1]+vm.year.selected[2]+(vm.year.selected[3]-(-1))+
                    vm.year.selected[4]+vm.year.selected[5]+(vm.year.selected[6]-(-1));
     vm.prevYear = function(){
-        var x = setYear.get();
-        console.log('in service the year1 - ' + x.selected);
+
         vm.nyear = vm.year.selected;
-        var x = setYear.get();
-        console.log('in service the year2 - ' + x.selected);
+
         vm.year.selected = vm.pyear;
-        var x = setYear.get();
-        console.log('in service the year3 - ' + x.selected);
+
         vm.pyear = vm.pyear[0]+vm.pyear[1]+vm.pyear[2]+(vm.pyear[3]-1)+
                    vm.pyear[4]+vm.pyear[5]+(vm.pyear[6]-1);
         console.log('prev year got ' + vm.pyear);
         console.log('next year got ' + vm.nyear);
-        var x = setYear.get();
-        console.log('in service the year4 - ' + x.selected);
+
         console.log('curr year ' + vm.year.selected);
         getData.matchDetails(vm.year.selected).then(function (details) {
           // success

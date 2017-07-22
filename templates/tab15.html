@@ -3,7 +3,7 @@
         <i class="fa fa-arrow-circle-left fa-3x col-xs-2" aria-hidden="true" ng-click="t15.prevYear()" ng-hide="t15.pyear=='2011-12'"></i>
         <h1 class="col-xs-8">POINTS TABLE : {{t15.year.selected}}</h1>
         <i class="fa fa-arrow-circle-right fa-3x col-xs-2" aria-hidden="true" ng-click="t15.nextYear()" ng-hide="t15.nyear=='2017-18'"></i>
-        <a href="#!view2015">
+        <a href="#!view">
             <i id="tomatch" title="MATCH RESULTS" class="fa fa-align-justify fa-2x" aria-hidden="true"></i>
         </a>
         <a href="#!">
@@ -14,7 +14,7 @@
             <tr style=" background-color: rgb(36,0,60);">
                 <th>RANK</th>
                 <th>TEAM</th>
-                <th>PLAYED</th>
+                <th class="hidden-xs">PLAYED</th>
                 <th>WON</th>
                 <th>LOST</th> 
                 <th class="hidden-xs">DRAW</th>
@@ -23,17 +23,17 @@
                 <th class="hidden-xs">GD</th>
                 <th>POINTS</th>
             </tr>
-            <tr ng-repeat="standing in t15.standings">
-                <td>{{$index+1}}</td>
-                <td>{{standing.code}}</td>
-                <td>{{standing.win + standing.draw + standing.loss}}</td>
-                <td>{{standing.win}}</td>
-                <td>{{standing.loss}}</td>   
-                <td class="hidden-xs">{{standing.draw}}</td>
-                <td class="hidden-xs">{{standing.gfo}}</td>
-                <td class="hidden-xs">{{standing.gao}}</td>
-                <td class="hidden-xs">{{standing.gdo}}</td>
-                <td>{{standing.point}}</td>
+            <tr ng-repeat="standing in t15.standings" ng-click="t15.setTeam(standing.code,t15.year.selected)">
+                    <td>{{$index+1}}</td>
+                    <td><a href="#!tabteam">{{standing.code}}</a></td>
+                    <td class="hidden-xs">{{standing.win + standing.draw + standing.loss}}</td>
+                    <td>{{standing.win}}</td>
+                    <td>{{standing.loss}}</td>   
+                    <td class="hidden-xs">{{standing.draw}}</td>
+                    <td class="hidden-xs">{{standing.gfo}}</td>
+                    <td class="hidden-xs">{{standing.gao}}</td>
+                    <td class="hidden-xs">{{standing.gdo}}</td>
+                    <td>{{standing.point}}</td>
             </tr>
         </table>
     </div>

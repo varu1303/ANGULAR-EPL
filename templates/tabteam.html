@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <h1 class="col-xs-12 gamelist">MATCHES PLAYED BY <span id="team">{{tabteam.team.code}}</span></h1>
+        <h3 class="col-xs-12 gamelist"><u>in {{tabteam.team.year}}</u></h1>
+        <p class="col-xs-12" style="padding: 5px;" ng-repeat="game in tabteam.gamelist">
+                <span class=" col-sm-5 team col-xs-5">{{game.team1.code}}</span>
+                <span class="score col-xs-1" ng-hide="game.score1 == null">{{game.score1}}</span>
+                <span class="score col-xs-1" ng-hide="game.score1 == null">{{game.score2}}</span>
+                <span class="score col-xs-1" ng-show="game.score1 == null">-</span>
+                <span class="score col-xs-1" ng-show="game.score1 == null">-</span>
+                <span class=" col-sm-5 team col-xs-5">{{game.team2.code}}</span>
+        </p>
+        
+    </div>
+</div>

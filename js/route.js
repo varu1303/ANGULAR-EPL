@@ -8,12 +8,12 @@ angular
 			         controller: 'MainCtrl',
                      controllerAs: 'main'
 		              })
-                    .when('/view2015', {
+                    .when('/view', {
 			         templateUrl: 'templates/view1.html',
 			         controller: 'v15Ctrl',
                      controllerAs: 'v15'
 		              })
-                    .when('/table2015', {
+                    .when('/table', {
 			         templateUrl: 'templates/tab15.html',
 			         controller: 't15Ctrl',
                      controllerAs: 't15'
@@ -27,6 +27,11 @@ angular
 			         templateUrl: 'templates/team1.html',
 			         controller: 'teamstat1Ctrl',
                      controllerAs: 'teamstat1'
+		              })
+                    .when('/tabteam', {
+			         templateUrl: 'templates/tabteam.html',
+			         controller: 'tabteamCtrl',
+                     controllerAs: 'tabteam'
 		              })
                     .otherwise({
                       redirectTo: '/'
