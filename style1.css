@@ -2,9 +2,11 @@
   display: none !important;
 }
 
-html, body{
+*{
     margin: 0;
     padding: 0;
+}
+html, body{
     overflow-x:hidden;
 }
 
@@ -124,7 +126,7 @@ img{
     font-weight: bolder;
     font-family: 'Montserrat', sans-serif;
     text-align: center;  
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 
 .score{
@@ -238,14 +240,14 @@ hr{
 
 #totab {
    position: fixed;
-    top: 150px;
+    bottom: 100px;
     right: 30px; 
 }
 
 #tohome {
    position: fixed;
-    top: 150px;
-    left: 30px; 
+    bottom: 150px;
+    right: 30px; 
 }
 
 /*for active links*/
@@ -350,6 +352,13 @@ hr{
     img{
         margin-top: 30%;
         width:100%;
+    }
+    .team{ 
+        font-size: 1em;
+    }
+
+    .score{
+        font-size: 1em;
     }
 }
 
