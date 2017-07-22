@@ -13,7 +13,7 @@
         <div style="margin:8px">
             <p class="col-sm-6 col-xs-12 mdshow"> <u>SEE MATCHES WITH SAME OR MORE GD</u></p>
             <div class="input-group col-sm-6 col-xs-12 ">
-                <input type="text" class="form-control" placeholder="Enter GD" aria-describedby="basic-addon2" ng-model="v15.gd">
+                <input type="text" class="form-control" placeholder="Enter GOAL DIFFERENCE" aria-describedby="basic-addon2" ng-model="v15.gd">
             </div>
         </div>
         <hr>
@@ -37,6 +37,10 @@
         <i class="fa fa-arrow-circle-right fa-2x col-xs-4" aria-hidden="true" style="text-align: center;" ng-click="v15.incr()"></i>
         </p>
 
+        <div class="instruct col-xs-12">
+            <p><i><i class="fa fa-info-circle" aria-hidden="true"></i>  CLICK ON THE SCORE TO SEE MATCH's DETAILS</i></p>
+            <p><i><i class="fa fa-info-circle" aria-hidden="true"></i>  CLICK ON THE TEAM TO SEE TEAM's STAT</i></p>
+        </div>
         
         <div id="matchdetails" ng-repeat="round in v15.rounds | limitTo:v15.manyday:v15.fromday">
             <p class="aRound col-xs-12" ng-hide="v15.filtering">{{round.name}} - {{round.matches[0].date | date : 'MMM dd yyyy'}}</p>
@@ -56,10 +60,10 @@
             </p>
         </div>
     </div>
-     <a  id="totab" href="#!table">
-         <i id="totab" class="fa fa-table fa-2x" title="POINTS TABLE" aria-hidden="true"></i>
+     <a href="#!table">
+         <i id="totab"  class="fa fa-table fa-2x" title="POINTS TABLE" aria-hidden="true"></i>
     </a>
-    <a id="tohome" href="#!">
-        <i class="fa fa-home fa-2x" title="HOME" aria-hidden="true"></i>
+    <a href="#!">
+        <i  id="tohome" class="fa fa-home fa-2x" title="HOME" aria-hidden="true"></i>
     </a>
 </div>
